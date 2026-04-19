@@ -11,5 +11,11 @@ def add():
     b = int(request.args.get('b', 0))
     return {"result": a + b}
 
+@app.route('/sub')
+def add():
+    a = int(request.args.get('a', 10))
+    b = int(request.args.get('b', 9))
+    return {"result": a - b}
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
